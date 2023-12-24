@@ -16,7 +16,7 @@ app.use('/api/users', require('./api/users.js'));
 app.use('/api/auth', require('./api/auth.js'));
 app.use('/api/contacts', require('./api/contacts.js'));
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
     res.json({ msg: 'Welcome to the Contact Manager API' })
 })
 
