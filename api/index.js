@@ -1,6 +1,7 @@
 const express = require('express');
-const connectDB = require('./config/db');
+const connectDB = require('../config/db');
 const path = require('path');
+const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -8,12 +9,12 @@ const app = express();
 connectDB();
 
 // Init Middleware
-app.use(express.json({ extended: false }))
+app.use(bodyParser.json({ extended: false }))
 
 // Define Routes here
-app.use('/api/users', require('./api/users'));
-app.use('/api/auth', require('./api/auth'));
-app.use('/api/contacts', require('./api/contacts'));
+app.use('/api/users', require('./users.js'));
+app.use('/api/auth', require('./auth.js'));
+app.use('/api/contacts', require('./contacts.js'));
 
 app.get('/', (req, res) => {
     res.json({ msg: 'Welcome to the Contact Manager API' })
