@@ -112,3 +112,5 @@ dist
 /client/.env.production.local 
 .vercel
 config
+
+node_modules
