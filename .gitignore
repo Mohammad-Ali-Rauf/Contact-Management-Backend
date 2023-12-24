@@ -110,3 +110,5 @@ dist
 /client/.env.development.local 
 /client/.env.test.local 
 /client/.env.production.local 
+.vercel
+config
