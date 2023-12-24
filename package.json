@@ -2,6 +2,9 @@
   "name": "contact-management",
   "version": "1.0.0",
   "main": "server.js",
+  "engines": {
+    "node": "16.20.2"
+  },
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
