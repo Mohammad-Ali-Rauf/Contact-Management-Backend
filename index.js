@@ -12,11 +12,11 @@ connectDB();
 app.use(bodyParser.json({ extended: false }))
 
 // Define Routes here
-app.use('/api/users', require('./api/users.js'));
-app.use('/api/auth', require('./api/auth.js'));
-app.use('/api/contacts', require('./api/contacts.js'));
+app.use('/api/users', require('./routes/users.js'));
+app.use('/api/auth', require('./routes/auth.js'));
+app.use('/api/contacts', require('./routes/contacts.js'));
 
-app.get('/api', (req, res) => {
+app.get('/', (req, res) => {
     res.json({ msg: 'Welcome to the Contact Manager API' })
 })
 
