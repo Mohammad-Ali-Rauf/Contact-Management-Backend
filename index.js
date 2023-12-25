@@ -2,8 +2,12 @@ const express = require('express');
 const connectDB = require('./config/db.js');
 const path = require('path');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
+
+// Apply cors to avoid cors policy error
+app.use(cors({ AccessControlAllowOrigin: '*' }))
 
 // Connect to MongoDB
 connectDB();
